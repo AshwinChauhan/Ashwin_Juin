@@ -14,7 +14,7 @@ public class Ecrire1 {
 	public static void main(String[] args) {
 		String Fichier = "Ecrire.txt";
 		final String s1 = "Voici ce que je voudrais";
-		final String s2=" écrire et vous faire comprendre";
+		final String s2=" écrire";
 		
 		FileWriter ficAEcrire;
 		PrintWriter sortie;
