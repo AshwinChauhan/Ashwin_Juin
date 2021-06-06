@@ -1,6 +1,6 @@
 /*
 * Auteur: ashwin
-* Date : Jun. 4, 2021
+* Date : Jun. 6, 2021
 * Description :
 */
 package application;
@@ -11,27 +11,26 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class Example2 {
+public class Example3 {
 
 	public static void main(String[] args) throws IOException,FileNotFoundException
 	{
-		
 		FileReader ficALire;
 		BufferedReader entree;
-		char c;
+		int c;
 		
 		ficALire = new FileReader("monFichier.txt");
-		entree = new BufferedReader (ficALire);
-		c = (char) entree.read();
-		System.out.println(c);
-		c = (char) entree.read();
-		System.out.println(c);
-		c = (char) entree.read();
-		System.out.println(c);
+		entree = new BufferedReader(ficALire);
+		c = entree.read(); // lecture du premier caractere
+		
+		while (c != -1 && c != '\n');
+		{
+			System.out.println((char) c);
+			c=entree.read();
+		}
+		
 		entree.close();
 		ficALire.close();
-		
-		
 	}
 
 }
